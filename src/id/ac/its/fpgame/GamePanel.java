@@ -27,8 +27,9 @@ class GamePanel extends JPanel{
     static int nyawa =3;
     boolean gameOver = false;
     
-  
- 
+    public static void setFall(int newFall) {
+    	fall = newFall;
+    }
 
 	GamePanel(){
        
