@@ -1,4 +1,4 @@
- Game panen buah merupakan suatu game dimana para pemain diminta untuk mengumpulkan buah sebanyak - banyaknya dalam waktu terbatas menggunakan keranjang yang sudah ada dalam permainan. Di dalam game ini terdapat beberapa fitur di antaranya fitur help, play,level dan exit saat permainan dimulai pengguna dapat mengklik fitur help untuk melihat panduan permainan. 
+ Game panen buah merupakan suatu game dimana para pemain diminta untuk mengumpulkan buah sebanyak - banyaknya dengan nyawa yang diberikan menggunakan keranjang yang sudah ada dalam permainan. Di dalam game ini terdapat beberapa fitur di antaranya fitur help, play,level dan exit saat permainan dimulai pengguna dapat mengklik fitur help untuk melihat panduan permainan. 
 
 
 
