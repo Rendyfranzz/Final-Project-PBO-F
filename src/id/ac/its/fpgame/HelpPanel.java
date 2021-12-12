@@ -10,7 +10,7 @@ import java.awt.Font;
  
 class HelpPanel extends JPanel{
  
-    Image helpbkg = new ImageIcon (this.getClass().getResource("helppanel.png")).getImage();
+    Image helpbkg = new ImageIcon (this.getClass().getResource("helppanel.jpg")).getImage();
     JButton back = new JButton("Back");
    
     HelpPanel(){
