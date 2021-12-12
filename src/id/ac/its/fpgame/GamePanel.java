@@ -24,6 +24,7 @@ class GamePanel extends JPanel{
     JLabel points;
     JLabel sisanyawa;
     int pointsCount;
+    int highestScore = 0;
     static int nyawa =3;
     boolean gameOver = false;
     
@@ -140,12 +141,23 @@ class GamePanel extends JPanel{
         	back.setBounds(490,500,100,20);
             add(back);
             back.setVisible(true);
+            
+            if(pointsCount > highestScore) {
+            	highestScore = pointsCount; 
+            }
+            
+            JLabel highScoreLabel = new JLabel("High Score : " + highestScore);
+            highScoreLabel.setBounds(400, 350, 500, 200);
+            highScoreLabel.setForeground(Color.BLACK);
+            highScoreLabel.setFont(new Font("Roboto",Font.BOLD,44));
+            add(highScoreLabel);
+            highScoreLabel.setVisible(true);
     		
-            JLabel yourScore = new JLabel("Your SCORE :" + pointsCount);
-            yourScore.setBounds(415, 350, 500, 200);
+            JLabel yourScore = new JLabel("Your Score : " + pointsCount);
+            yourScore.setBounds(430, 450, 500, 200);
             gameOver = true;
             yourScore.setForeground(Color.BLACK);
-            yourScore.setFont(new Font("Roboto",Font.BOLD,40));
+            yourScore.setFont(new Font("Roboto",Font.BOLD,36));
            
             add(yourScore);
             yourScore.setVisible(true);
@@ -155,6 +167,7 @@ class GamePanel extends JPanel{
                 	resetGame();
                 	back.setVisible(false);
                 	yourScore.setVisible(false);
+                	highScoreLabel.setVisible(false);
                     CteGame.cl.show(CteGame.cards, "MenuPanel"); 
                 }  
               });
