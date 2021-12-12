@@ -22,15 +22,20 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 public class CteGame extends JFrame{
    
-    
+	static MenuPanel mp = new MenuPanel();
+    static HelpPanel hp = new HelpPanel();
     static GamePanel gp = new GamePanel();
+    static LevelPanel lp = new LevelPanel();
     static CardLayout cl = new CardLayout();
     static JPanel cards = new JPanel(); 
    
     CteGame(){
        
         cards.setLayout(cl);
+        cards.add(mp, "MenuPanel");
+        cards.add(hp, "HelpPanel");
         cards.add(gp, "GamePanel");
+        cards.add(lp, "LevelPanel");
         
         cl.show(cards, "MenuPanel");
         add(cards); 

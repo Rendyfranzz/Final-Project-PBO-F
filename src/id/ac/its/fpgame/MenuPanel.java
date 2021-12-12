@@ -22,11 +22,15 @@ import java.awt.Font;
 class MenuPanel extends JPanel{
  
     JButton play = new JButton("");
+    JButton level = new JButton("");
+    JButton help = new JButton("");
     JButton exit = new JButton("");
    
     Image menubkg = new ImageIcon (this.getClass().getResource("background.jpg")).getImage();
    
     ImageIcon playbtn = new ImageIcon (this.getClass().getResource ("play.png"));
+    ImageIcon levelbtn = new ImageIcon (this.getClass().getResource ("level.png"));
+    ImageIcon helpbtn = new ImageIcon (this.getClass().getResource ("help.png"));
     ImageIcon exitbtn = new ImageIcon (this.getClass().getResource ("exit.png"));
  
     JPanel center = new JPanel();
@@ -37,12 +41,18 @@ class MenuPanel extends JPanel{
         add(center);
        
         play.setIcon(playbtn);
+        level.setIcon(levelbtn);
+        help.setIcon(helpbtn);
         exit.setIcon(exitbtn);
        
         center.add(play);
+        center.add(level);
+        center.add(help);
         center.add(exit);
                
         play.addMouseListener(new Click());
+        level.addMouseListener(new Click());
+        help.addMouseListener(new Click());
         exit.addMouseListener(new Click());
        
     }
@@ -52,6 +62,12 @@ class MenuPanel extends JPanel{
             if(me.getSource()== play){
                 CteGame.cl.show(CteGame.cards, "GamePanel");
             }
+            if(me.getSource()== level){
+                CteGame.cl.show(CteGame.cards, "LevelPanel");
+            }
+            if(me.getSource()== help){
+                CteGame.cl.show(CteGame.cards, "HelpPanel");
+            }  
             if(me.getSource()== exit){
                 System.exit(0);
             }
