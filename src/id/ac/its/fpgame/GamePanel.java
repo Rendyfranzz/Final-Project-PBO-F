@@ -38,9 +38,9 @@ class GamePanel extends JPanel{
         tempbkg = gamebkg;
        
         x_basket = 400; y_basket = 550;
-        x_buah = (int)rand.nextInt(1230);
+        x_buah = (int)rand.nextInt(1000);
         y_buah = 0;
-        x_buah2 = (int)rand.nextInt(1230);
+        x_buah2 = (int)rand.nextInt(1000);
         y_buah2 = 0;
        
        
@@ -101,21 +101,21 @@ class GamePanel extends JPanel{
             pointsCount+=5; 
             points.setText("Points:"+pointsCount);
             y_buah = 0; 
-            x_buah = rand.nextInt(1230); 
+            x_buah = rand.nextInt(1000); 
         }else if(anggurRect.intersects(basketRect)) {
         	pointsCount+=10; 
             points.setText("Points:"+pointsCount); 
             y_buah2 = 0; 
-            x_buah2 = rand.nextInt(1230); 
+            x_buah2 = rand.nextInt(1000); 
         }else if (anggurRect.intersects(miss) || pisangRect.intersects(miss) ) {
         	if(pisangRect.intersects(miss)) {
         		nyawa-=1;
                 y_buah = 0; 
-                x_buah = rand.nextInt(1230);
+                x_buah = rand.nextInt(1000);
         	}else if(anggurRect.intersects(miss)) {
         		nyawa-=1;
         		 y_buah2 = 0;
-        	     x_buah2 = rand.nextInt(1230);
+        	     x_buah2 = rand.nextInt(1000);
         		
         	}
         	sisanyawa.setText("nyawa:"+nyawa);
