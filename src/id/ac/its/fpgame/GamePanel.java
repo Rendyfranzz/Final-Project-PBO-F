@@ -5,15 +5,15 @@ import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.event.*;
 import java.util.*;
+
 class GamePanel extends JPanel{
     Image gamebkg = new ImageIcon(this.getClass().getResource("background.jpg")).getImage();
     Image basket  = new ImageIcon(this.getClass().getResource("basket2.png")).getImage();
     Image egg     = new ImageIcon(this.getClass().getResource("pisang.png")).getImage();
     Image anggur     = new ImageIcon(this.getClass().getResource("anggur.png")).getImage();
-    Image gameOverbkg= new ImageIcon (this.getClass().getResource ("gameover.png")).getImage();
+    Image gameOverbkg= new ImageIcon (this.getClass().getResource ("gameover.jpg")).getImage();
     Image tempbkg;
 	JButton back = new JButton("Back");
-    
    
     int x_basket,y_basket;
     int x_buah,y_buah,x_buah2,y_buah2;
@@ -37,7 +37,7 @@ class GamePanel extends JPanel{
         setFocusable(true);
         tempbkg = gamebkg;
        
-        x_basket = 400; y_basket = 550;
+        x_basket = 476; y_basket = 550;
         x_buah = (int)rand.nextInt(1000);
         y_buah = 0;
         x_buah2 = (int)rand.nextInt(1000);
@@ -71,6 +71,16 @@ class GamePanel extends JPanel{
             }
         });
     }
+	
+	public void resetGame() {
+		gameOver = false;
+        nyawa = 3;
+        point = 0;
+        pointsCount = 0;
+        points.setText("Points: 0");
+        sisanyawa.setText("nyawa: 3");
+        tempbkg = gamebkg;
+	}
    
     void fallFruit(){
         if(y_buah >=650){
@@ -127,20 +137,25 @@ class GamePanel extends JPanel{
         {
         	tempbkg = gameOverbkg;
         	
-        	back.setBounds(600,500,100,20);
+        	back.setBounds(490,500,100,20);
             add(back);
+            back.setVisible(true);
     		
             JLabel yourScore = new JLabel("Your SCORE :" + pointsCount);
-            yourScore.setBounds(500, 350, 500, 200);
+            yourScore.setBounds(415, 350, 500, 200);
             gameOver = true;
             yourScore.setForeground(Color.BLACK);
             yourScore.setFont(new Font("Roboto",Font.BOLD,40));
            
             add(yourScore);
+            yourScore.setVisible(true);
             
             back.addMouseListener(new MouseAdapter(){
                 public void mouseClicked(MouseEvent me){
-                            CteGame.cl.show(CteGame.cards, "MenuPanel"); 
+                	resetGame();
+                	back.setVisible(false);
+                	yourScore.setVisible(false);
+                    CteGame.cl.show(CteGame.cards, "MenuPanel"); 
                 }  
               });
             
