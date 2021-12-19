@@ -20,7 +20,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
-public class CteGame extends JFrame{
+public class PbGame extends JFrame{
    
 	static MenuPanel mp = new MenuPanel();
     static HelpPanel hp = new HelpPanel();
@@ -29,7 +29,7 @@ public class CteGame extends JFrame{
     static CardLayout cl = new CardLayout();
     static JPanel cards = new JPanel(); 
    
-    CteGame(){
+    PbGame(){
        
         cards.setLayout(cl);
         cards.add(mp, "MenuPanel");
@@ -50,7 +50,7 @@ public class CteGame extends JFrame{
     
    	
 public static void main(String args[]){
-        new CteGame();
+        new PbGame();
         
     }
 }

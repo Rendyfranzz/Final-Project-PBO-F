@@ -59,7 +59,7 @@ public class LevelPanel extends JPanel {
 	class MouseClick extends MouseAdapter {
 		public void mouseClicked(MouseEvent e) {
 			if(e.getSource() == backButton)
-				CteGame.cl.show(CteGame.cards, "MenuPanel");
+				PbGame.cl.show(PbGame.cards, "MenuPanel");
 			else {				
 				if(e.getSource() == easyLevel)
 					GamePanel.setFall(1);
@@ -67,7 +67,7 @@ public class LevelPanel extends JPanel {
 					GamePanel.setFall(2);
 				else
 					GamePanel.setFall(3);
-				CteGame.cl.show(CteGame.cards, "GamePanel");
+				PbGame.cl.show(PbGame.cards, "GamePanel");
 			}
 		}
 	}

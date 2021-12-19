@@ -19,7 +19,7 @@ class HelpPanel extends JPanel{
        
         back.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent me){
-            	CteGame.cl.show(CteGame.cards, "MenuPanel");
+            	PbGame.cl.show(PbGame.cards, "MenuPanel");
             }  
         });
     }

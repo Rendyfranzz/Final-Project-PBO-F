@@ -168,7 +168,7 @@ class GamePanel extends JPanel{
                 	back.setVisible(false);
                 	yourScore.setVisible(false);
                 	highScoreLabel.setVisible(false);
-                    CteGame.cl.show(CteGame.cards, "MenuPanel"); 
+                    PbGame.cl.show(PbGame.cards, "MenuPanel"); 
                 }  
               });
             

@@ -60,13 +60,13 @@ class MenuPanel extends JPanel{
     class Click extends MouseAdapter{
         public void mouseClicked(MouseEvent me){
             if(me.getSource()== play){
-                CteGame.cl.show(CteGame.cards, "GamePanel");
+                PbGame.cl.show(PbGame.cards, "GamePanel");
             }
             if(me.getSource()== level){
-                CteGame.cl.show(CteGame.cards, "LevelPanel");
+                PbGame.cl.show(PbGame.cards, "LevelPanel");
             }
             if(me.getSource()== help){
-                CteGame.cl.show(CteGame.cards, "HelpPanel");
+                PbGame.cl.show(PbGame.cards, "HelpPanel");
             }  
             if(me.getSource()== exit){
                 System.exit(0);
